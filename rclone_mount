@@ -3,7 +3,7 @@
 ######################
 #### Mount Script ####
 ######################
-### Version 0.96.4 ###
+### Version 0.96.5-scumbug ###
 ######################
 
 ####### EDIT ONLY THESE SETTINGS #######
@@ -15,12 +15,12 @@
 # 4. Optional: include extra folders in mergerfs mount
 
 # REQUIRED SETTINGS
-RcloneRemoteName="gdrive_vfs" # Name of rclone remote mount WITHOUT ':'. NOTE: Choose your encrypted remote for sensitive data
+RcloneRemoteName="google_vfs" # Name of rclone remote mount WITHOUT ':'. NOTE: Choose your encrypted remote for sensitive data
 LocalFilesShare="/mnt/user/local" # location of the local files you want to upload without trailing slash to rclone e.g. /mnt/user/local
 RcloneMountShare="/mnt/user/mount_rclone" # where your rclone remote will be located without trailing slash  e.g. /mnt/user/mount_rclone
 MergerfsMountShare="/mnt/user/mount_mergerfs" # location without trailing slash  e.g. /mnt/user/mount_mergerfs. Enter 'ignore' to disable
-DockerStart="nzbget plex sonarr radarr ombi" # list of dockers, separated by space, to start once mergerfs mount verified. Remember to disable AUTOSTART in docker settings page
-MountFolders=\{"downloads/complete,downloads/intermediate,downloads/seeds,movies,tv"\} # comma separated list of folders to create within the mount
+DockerStart="nzbget plex sonarr radarr bazarr rutorrent" # list of dockers, separated by space, to start once mergerfs mount verified. Remember to disable AUTOSTART in docker settings page
+MountFolders=\{"downloads/complete,downloads/intermediate,downloads/seeds,cloudtv,clouddownloads,cloudmovies"\} # comma separated list of folders to create within the mount
 
 # Note: Again - remember to NOT use ':' in your remote name above
 
