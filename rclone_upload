@@ -164,7 +164,7 @@ fi
 # process files
 	rclone $RcloneCommand $LocalFilesLocation $RcloneUploadRemoteName:$BackupRemoteLocation $ServiceAccount $BackupDir \
 	--user-agent="$RcloneUploadRemoteName" \
-	-vv \
+	-v \ #output lesser stuff
 	--buffer-size 512M \
 	--drive-chunk-size 512M \
 	--tpslimit 8 \
